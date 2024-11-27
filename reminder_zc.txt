@@ -1,0 +1,37 @@
+目前只保留了about publications repositories，其他的功能暂时不开启
+为此，新建了一个目录_pages_unused，把原本存在于_pages中不要的内容移进去
+然后，需要屏蔽掉不要的页面：在_config.yml里面的exclude添加了
+  - _pages_unused/
+  - _posts
+  - _projects
+并且，把_config.yml里面的external_sources的内容都注释掉
+
+为了让会议论文显示出是否oral之类的
+在_config.yml里面的filtered_bibtex_keywords增加了paper_rank这个tag
+然后修改了_layouts/bib.liquid的渲染逻辑
+{% elsif proceedings contains entry.type %}
+      {% capture entrytype %}<em>{{ entry.booktitle }}{% if entry.paper_rank %} <b>({{ entry.paper_rank }})</b>{% endif %}</em>{% endcapture %}
+这样，我们可以在_bibliography/papers.bib里面增加paper_rank={Oral}来标记是否oral
+
+为了显示中文的和日语片假名的名字，
+在_config.yml里面增加了chinese_name和japanese_name字段
+然后修改了_layouts/about.liquid的渲染逻辑
+{% if site.title == 'blank' %}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        {{ site.last_name }}（{{site.chinese_name}}，{{site.japanese_name}}）
+
+_config.yml中一部分自定义的内容：
+icon: favicon.ico
+图像替换成自己的
+
+latest_posts:
+  enabled: false
+不要在about页面显示latest_posts
+
+max_author_limit:
+留空，表示所有作者显示
+
+output_formats:
+    webp: "-quality 100"
+表示图像质量保留完整
+
