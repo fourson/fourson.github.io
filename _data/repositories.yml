@@ -4,6 +4,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - fourson/Learning-to-Deblur-Polarized-Images
   - fourson/Polarization-Guided-Mask-Free-Shadow-Removal
   - fourson/Quality-Improved-and-Property-Preserved-Polarimetric-Imaging-via-Complementarily-Fusing
   - fourson/Deblurring-Low-Light-Images-with-Events
