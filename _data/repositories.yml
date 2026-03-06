@@ -4,6 +4,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - fourson/PolFusion_plus
   - fourson/Polarimetric-Neural-Field-via-Unified-Complex-Valued-Wave-Representation
   - fourson/Learning-to-Deblur-Polarized-Images
   - fourson/Polarization-Guided-Mask-Free-Shadow-Removal
