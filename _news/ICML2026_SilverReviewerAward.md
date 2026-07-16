@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Receive an ICML 2025 Silver Reviewer Award! :medal_sports:
+Receive an ICML 2026 Silver Reviewer Award! :medal_sports:
